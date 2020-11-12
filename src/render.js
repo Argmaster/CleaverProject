@@ -330,7 +330,7 @@ function openJSONFile() {
 	let file = dialog.showOpenDialogSync({
 		title: 'Select JSON file',
 		properties: ['openFile'],
-		filters: [{ name: '*', extensions: ['json'] }]
+		filters: [{ name: 'JSON', extensions: ['json'] }]
 	});
 	if (file != undefined) {
 		file = file[0];
@@ -416,7 +416,7 @@ function saveJSONFile() {
 	let file = dialog.showSaveDialogSync({
 		title: 'Select JSON file',
 		properties: ['openFile'],
-		filters: [{ name: '*', extensions: ['json'] }]
+		filters: [{ name: 'JSON', extensions: ['json'] }]
 	});
 	if (file != undefined) {
 		try {
