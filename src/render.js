@@ -1,4 +1,4 @@
-const { dialog, Menu } = require('electron').remote;
+const { dialog, Menu, shell } = require('electron').remote;
 const fs = require('fs');
 const { electron } = require('process');
 
@@ -473,7 +473,7 @@ const template = [
 	},
 	{
 		label: 'Author',
-		click: () => electron.shell.openExternal('https://github.com/Argmaster')
+		click: () => shell.openExternal('https://github.com/Argmaster')
 	}
 ];
 const menu = Menu.buildFromTemplate(template);
