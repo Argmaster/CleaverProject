@@ -1,5 +1,6 @@
 const { dialog, Menu } = require('electron').remote;
 const fs = require('fs');
+const { electron } = require('process');
 
 window.nexusData = {
 	TAXA_TITLE: 'TITLE None',
@@ -469,6 +470,10 @@ const template = [
 	{
 		label: 'Properties',
 		click: toggleFileProperties
+	},
+	{
+		label: 'Author',
+		click: () => electron.shell.openExternal('https://github.com/Argmaster')
 	}
 ];
 const menu = Menu.buildFromTemplate(template);
