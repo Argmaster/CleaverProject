@@ -1,0 +1,227 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+    margin: none;
+    width: 100vw;
+    height: 100vh;
+    padding: none;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #292e35;
+}
+::-webkit-scrollbar-thumb {
+    background: #185db8;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #206ed3;
+}
+::-webkit-scrollbar-corner {
+    background-color: #22272c;
+}
+.side-nav {
+    display: flex;
+    flex-direction: column;
+    background-color: #292e35;
+    width: 4rem;
+    min-width: 4rem;
+    height: 100%;
+}
+.side-nav-icon {
+    cursor: pointer;
+    width: 100%;
+    padding: 0.5rem;
+}
+main {
+    color: white;
+    background-color: #1b1e22;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.file-title-outer {
+    width: 100%;
+    height: 4rem;
+    overflow-x: scroll;
+}
+.file-title-outer::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+}
+.file-title-outer::-webkit-scrollbar-track {
+    background:#22272e;
+}
+.file-title-outer::-webkit-scrollbar-thumb {
+    background: #245492;
+}
+.file-title-outer::-webkit-scrollbar-thumb:hover {
+    background: #2e61a3;
+}
+.file-title {
+    display: block;
+    min-width: 100%;
+    width: fit-content;
+    height: 100%;
+    font-size: 16px;
+    padding: 1rem;
+    background-color: #22272e;
+    white-space: nowrap;
+}
+.main-inner-block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100% - 4rem);
+    overflow: scroll;
+    box-shadow: inset 0px 5px 5px #141414;
+}
+/* Remove orange focus border */
+input:focus,
+textarea:focus {
+    border: none;
+    outline: none;
+}
+/* Input Header row */
+.spec-input-header {
+    min-width: calc(20rem + 1px);
+    padding: 0.5rem;
+    font-weight: 500;
+    text-align: center;
+    font-size: 18px;
+    margin-left: 0.5rem;
+}
+/* Header row */
+.spec-header {
+    width: 100%;
+    text-align: center;
+    color: white;
+    border: none;
+    border-left: 1px dotted white;
+    background-color: #00000000;
+    padding: 1rem;
+}
+.spec-header:focus {
+    border-left: 1px dotted white;
+    background-color: #256aff3f;
+}
+/* first, input row */
+.spec-input {
+    min-width: 20rem;
+    width: 100%;
+    color: white;
+    background-color: #00000000;
+    border: none;
+    padding: 0.5rem;
+    margin: 0.1rem;
+}
+.spec-input:hover {
+    user-select: none;
+    outline: none;
+    border: none;
+    background-color: rgba(37, 131, 255, 0.3);
+}
+.spec-input:focus {
+    outline: none;
+    border: none;
+    background-color: rgba(37, 132, 255, 0.45);
+}
+/* Rows of radiobuttons */
+.spec-row {
+    border-top: 1px solid white;
+    padding: 0.5rem;
+    filter: brightness(0.8);
+}
+#workspace :nth-child(2n).spec-row {
+    background-color: #0e111470;
+}
+.spec-row:hover {
+    background-color: #5558ff44 !important;
+    filter: brightness(1);
+}
+.light-column {
+    filter: brightness(1) !important;
+    background-color: rgba(66, 179, 255, 0.219);
+}
+.spec-radio-col {
+    min-width: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    border-left: 1px dotted white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.spec-radio-col input[type="radio"] {
+    transform: scale(2);
+    margin: 1rem;
+}
+.spec-radio-col label {
+    display: block;
+    padding-top: 0.7rem;
+    padding-right: 0.5rem;
+}
+.add-species {
+    /*cursor: pointer;
+    background-color: rgb(56, 158, 78);*/
+    background-color: rgb(69, 83, 72);
+    height: 3rem;
+    position: relative;
+}
+.add-species div {
+    position: absolute;
+    width: 2px;
+    height: 50%;
+    background-color: white;
+    top: 25%;
+    left: 50%;
+}
+.add-species div:nth-child(2) {
+    transform: rotate(90deg);
+}
+.file-menu-grab {
+    min-width: 0.8rem;
+    width: 0.8rem;
+    user-select: none;
+    cursor: e-resize;
+    background-color: #14161a;
+    color: white;
+    text-align: center;
+    padding-top: 48vh;
+}
+#file-menu {
+    padding: 0.5rem;
+    width: 40rem;
+    min-width: 40rem;
+    background-color: #22272c;
+    display: none;
+    overflow-y: scroll;
+}
+.file-menu-row {
+    padding: 0.5em;
+    color: white;
+}
+.file-menu-row input,
+.file-menu-row textarea {
+    background-color: #0000002d;
+    width: 100%;
+    border: none;
+    padding: 0.5rem;
+    color: white;
+    transition: all 150ms ease;
+    border-radius: 0.3rem;
+    border: 1px solid #0000002d;
+}
+.file-menu-row textarea {
+    min-height: 10rem;
+}
+.file-menu-row input:focus,
+.file-menu-row textarea:focus {
+    background-color: #1d159146;
+    border: 1px solid rgba(28, 81, 255, 0.527);
+}
