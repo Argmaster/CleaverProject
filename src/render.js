@@ -468,6 +468,18 @@ const template = [
 		]
 	},
 	{
+		label: 'Edit',
+		submenu: [
+			{ role: 'undo' },
+			{ role: 'redo' },
+			{ role: 'cut' },
+			{ role: 'copy' },
+			{ role: 'paste' },
+			{ role: 'delete' },
+			{ role: 'selectall' }
+		]
+	},
+	{
 		label: 'Properties',
 		click: toggleFileProperties
 	},
@@ -478,3 +490,4 @@ const template = [
 ];
 const menu = Menu.buildFromTemplate(template);
 Menu.setApplicationMenu(menu);
+setWorkspaceForm();

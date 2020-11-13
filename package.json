@@ -1,8 +1,8 @@
 {
-    "name": "nexus",
-    "productName": "nexus",
+    "name": "Nexus",
+    "productName": "Nexus",
     "version": "1.0.0",
-    "description": "My Electron application description",
+    "description": "Application for editing Nexus files",
     "main": "src/index.js",
     "scripts": {
         "start": "electron-forge start",
@@ -16,10 +16,12 @@
         "name": "Krzysztof",
         "email": "argmaster.world@gmail.com"
     },
-    "license": "MIT",
+    "license": "BSD",
     "config": {
         "forge": {
-            "packagerConfig": {},
+            "packagerConfig": {
+                "icon": "./img/Nexus.ico"
+            },
             "makers": [
                 {
                     "name": "@electron-forge/maker-squirrel",

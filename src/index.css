@@ -34,6 +34,7 @@ body {
     height: 100%;
 }
 .side-nav-icon {
+    user-select: none;
     cursor: pointer;
     width: 100%;
     padding: 0.5rem;
@@ -105,6 +106,7 @@ textarea:focus {
     border-left: 1px dotted white;
     background-color: #00000000;
     padding: 1rem;
+    font-weight: 500;
 }
 .spec-header:focus {
     border-left: 1px dotted white;
@@ -219,6 +221,7 @@ textarea:focus {
 }
 .file-menu-row textarea {
     min-height: 10rem;
+    letter-spacing: 1px;
 }
 .file-menu-row input:focus,
 .file-menu-row textarea:focus {

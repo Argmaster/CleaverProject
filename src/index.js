@@ -1,6 +1,8 @@
 const { app, BrowserWindow, dialog, Menu } = require('electron');
 const path = require('path');
 
+process.env.NODE_ENV = 'production';
+
 if (require('electron-squirrel-startup')) {
 	app.quit();
 }
@@ -16,8 +18,7 @@ const createWindow = () => {
 	});
 
 	mainWindow.loadFile(path.join(__dirname, 'index.html'));
-
-	mainWindow.webContents.openDevTools();
+	//mainWindow.webContents.openDevTools();
 };
 app.on('ready', function () {
 	createWindow();
