@@ -3,11 +3,11 @@ const fs = require('fs');
 const { electron } = require('process');
 
 window.nexusData = {
-	TAXA_TITLE: 'TITLE None',
-	TAXA_DIMENSIONS: 'DIMENSIONS NTAX=0',
+	TAXA_TITLE: 'None',
+	TAXA_DIMENSIONS: 'NTAX=0',
 	TAXLABELS: [],
-	CHARACTERS_TITLE: "TITLE 'none'",
-	CHARACTERS_DIMENSIONS: 'DIMENSIONS NCHAR=0',
+	CHARACTERS_TITLE: "'none'",
+	CHARACTERS_DIMENSIONS: 'NCHAR=0',
 	FEATURES_NAMES: [],
 	FEATURES_OPT: [],
 	MATRIX: [],
@@ -75,7 +75,7 @@ function setWorkspaceForm() {
 	}
 	$('#workspace').append(`
 	<tr>
-		<td class="add-species">
+		<td class="add-species" title="Not implemented yet">
 			<div></div><div></div>
 		</td>
 	</tr>`);

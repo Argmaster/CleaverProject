@@ -3,9 +3,6 @@ const path = require('path');
 
 process.env.NODE_ENV = 'production';
 
-if (require('electron-squirrel-startup')) {
-	app.quit();
-}
 const createWindow = () => {
 	// Create the browser window.
 	const mainWindow = new BrowserWindow({

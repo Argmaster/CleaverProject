@@ -171,9 +171,10 @@ textarea:focus {
 .add-species {
     /*cursor: pointer;
     background-color: rgb(56, 158, 78);*/
-    background-color: rgb(69, 83, 72);
+    background-color: rgb(40, 141, 91);
     height: 3rem;
     position: relative;
+    filter: grayscale(1) brightness(0.5)!important;
 }
 .add-species div {
     position: absolute;
