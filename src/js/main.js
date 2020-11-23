@@ -2,8 +2,6 @@ const { app, BrowserWindow, dialog, Menu } = require('electron');
 const os = require('os');
 const path = require('path');
 
-if (os.platform() == 'win32') {
-}
 
 const createWindow = async () => {
     // Create the browser window.
