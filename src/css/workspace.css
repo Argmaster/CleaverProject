@@ -36,6 +36,16 @@
 .file-prop-row {
     padding: 0.4rem;
 }
+.file-prop-row div:nth-child(1) {
+    font-size: 1.1rem;
+}
+.tree-prop-display-block {
+    padding-left: 1rem;
+}
+.tree-prop-display-block input[type=radio] {
+    transform: scale(1.5);
+    margin: 0.5rem;
+}
 .prop-input {
     width: 100%;
     border: 1px solid rgba(0, 0, 0, 0.7);

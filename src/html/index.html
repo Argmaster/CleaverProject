@@ -75,6 +75,17 @@
                     <div>TREE</div>
                     <textarea spellcheck="false" id="TREE" class="prop-input"></textarea>
                 </div>
+                <div class="file-prop-row">
+                    <div>Taxa in tree represented as:</div>
+                    <div class="tree-prop-display-block">
+                        <input type="radio" name="tRep" id="tRep0" checked>
+                        <label for="tRep0">names</label>
+                    </div>
+                    <div class="tree-prop-display-block">
+                        <input type="radio" name="tRep" id="tRep1">
+                        <label for="tRep1">indexes</label>
+                    </div>
+                </div>
             </div>
             <div class="extend-bar" onclick="$('#tree-div').toggleClass('workspace-inner-hidden')">||</div>
             <div class="workspace-inner" id="tree-div">

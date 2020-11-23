@@ -101,6 +101,9 @@ function setWorkspaceForm(nexusData) {
     $('#TREE_TITLE').val(nexusData.TREE_TITLE);
     $('#LINK_TAXA').val(nexusData.LINK_TAXA);
     $('#TREE_NAME').val(nexusData.TREE_NAME);
+    if (nexusData.TREE.search(/[a-zA-z]/) == -1) {
+        nexusData.TREE = toNamedTree(nexusData);
+    }
     $('#TREE').val(nexusData.TREE);
 }
 function getWorkspaceFormData() {
@@ -168,11 +171,23 @@ function getWorkspaceFormData() {
     });
     return nexusData;
 }
+function setTreeIndexed() {
+    window.nexusData.TREE = $('#TREE').val().trim();
+    window.nexusData.TREE = toIndexedTree(window.nexusData);
+    $('#TREE').val(window.nexusData.TREE);
+}
+function setTreeNamed() {
+    window.nexusData.TREE = $('#TREE').val().trim();
+    window.nexusData.TREE = toNamedTree(window.nexusData);
+    $('#TREE').val(window.nexusData.TREE);
+}
 $('#openNexusFile').on('click', openNexusFile);
 $('#saveNexusFile').on('click', saveNexusFile);
 $('#openJSONFile').on('click', openJSONFile);
 $('#saveJSONFile').on('click', saveJSONFile);
 $('.file-menu-grab').on('click', toggleFileProperties);
+$('#tRep0').on('click', setTreeNamed);
+$('#tRep1').on('click', setTreeIndexed);
 const template = [
     {
         label: 'Nexus file',
