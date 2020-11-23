@@ -1,0 +1,15 @@
+.side-nav {
+    display: flex;
+    flex-direction: column;
+    width: 3rem;
+    min-width: 3rem;
+    min-height: 100vh;
+    background-color: rgba(255, 255, 255, 0.05);
+    user-select: none;
+}
+.side-nav-icon {
+    cursor: pointer;
+    width: 100%;
+    padding: 0.5rem;
+    filter: brightness(0.8) ;
+}

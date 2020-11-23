@@ -1,27 +1,23 @@
 {
-  "name": "nexus",
-  "appname": "Nexus",
-  "version": "1.0.0",
-  "description": "Application for modifying nexus files",
-  "main": "src/index.js",
+  "name": "cleaver",
+  "version": "2.0.0",
+  "description": "Application for modifying nexus file",
+  "main": "src/js/main.js",
   "scripts": {
-    "build-mac": "electron-packager . --platform darwin --icon img/icon.icns --out dist/ --overwrite",
-    "pack-mac": "electron-installer-dmg ./dist/nexus-darwin-x64/nexus.app Nexus --icon=img/icon.icns --out=dist/installers/ --title=Nexus",
-    "build-linux": "electron-packager . --platform linux --icon img/icon.png --out dist/ --overwrite",
-    "pack-linux": "electron-installer-debian --src dist/linux/nexus-linux-x64/ --dest dist/installers/ --arch amd64",
-    "build-win": "electron-packager . --platform win32 --icon img/icon.ico --out dist/ --overwrite",
-    "pack-win": "electron-installer-windows --src dist/nexus-win32-x64/ --dest dist/installers/",
-    "start": "electron ."
+    "test": "electron ."
   },
-  "author": "Krzysztof Wisniewski",
-  "url": "https://github.com/Argmaster/NexusFileEditor/issues",
-  "email": "argmaster.world@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Argmaster/nexus.git"
+  },
+  "author": "Krzysztof Wiśniewski",
   "license": "BSD-3-Clause",
-  "devDependencies": {
-    "electron": "^10.1.5",
-    "electron-installer-dmg": "^3.0.0",
-    "electron-installer-windows": "^3.0.0",
-    "electron-packager": "^15.1.0",
+  "bugs": {
+    "url": "https://github.com/Argmaster/nexus/issues"
+  },
+  "homepage": "https://github.com/Argmaster/nexus#readme",
+  "dependencies": {
+    "electron": "^11.0.2",
     "jquery": "^3.5.1"
   }
 }

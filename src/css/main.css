@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgb(189, 189, 189);
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(34, 34, 34);
+}
+main {
+    display: flex;
+    flex-direction: column;
+    min-width: calc(100% - 3rem);
+    max-width: calc(100% - 3rem);
+}
+input:focus, input:active, input, textarea {
+    border: none;
+    outline: none;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: rgb(22, 22, 22);
+}
+::-webkit-scrollbar-thumb {
+    background: #185db8;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #206ed3;
+}
+::-webkit-scrollbar-corner {
+    background-color: #22272c;
+}
+.file-path-box {
+    display: flex;
+    flex-direction: row;
+    user-select: none;
+    padding: 0.2rem;
+    height: 1.9rem;
+    width: 100%;
+    max-width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.file-path-box::-webkit-scrollbar {
+    height: 3px;
+}
+.file-path-icon {
+    height: 1rem;
+}
+.file-path-text {
+    padding-left: 0.5rem;
+    user-select: all;
+    font-size: 0.9rem;
+    display: inline-block;
+    width: fit-content;
+    white-space: nowrap;
+}
