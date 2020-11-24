@@ -70,6 +70,7 @@ function openNexusFile() {
             $('#file-main-title').text(file);
             window.nexusData = parseNexusFile(filedata);
             setWorkspaceForm(window.nexusData);
+            renderTree();
         } catch (e) {
             dialog.showErrorBox('File opening error', 'Unable to open file.');
         }

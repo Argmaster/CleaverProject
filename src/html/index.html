@@ -8,13 +8,15 @@
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/workspace.css">
     <link rel="stylesheet" href="../css/table.css">
+    <link rel="stylesheet" href="../css/tree.css">
 
 
     <script>const $ = require('jquery');</script>
+    <script defer src="../js/parser.js"></script>
+    <script defer src="../js/form.js"></script>
+    <script defer src="../js/tree.js"></script>
     <script defer src="../js/nexio.js"></script>
     <script defer src="../js/jsonio.js"></script>
-    <script defer src="../js/tree.js"></script>
-    <script defer src="../js/parser.js"></script>
     <script defer src="../js/index.js"></script>
 </head>
 <body>
@@ -88,7 +90,7 @@
                 </div>
             </div>
             <div class="extend-bar" onclick="$('#tree-div').toggleClass('workspace-inner-hidden')">||</div>
-            <div class="workspace-inner" id="tree-div">
+            <div class="workspace-inner workspace-inner-hidden" id="tree-div">
 
             </div>
         </div>
