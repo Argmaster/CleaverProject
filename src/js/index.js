@@ -63,6 +63,10 @@ const template = [
         click: toggleFileProperties,
     },
     {
+        label: "Redraw Tree",
+        click: renderTree,
+    },
+    {
         label: "Author",
         click: () => shell.openExternal("https://github.com/Argmaster"),
     },
