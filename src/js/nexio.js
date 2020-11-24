@@ -71,7 +71,7 @@ function openNexusFile() {
             window.nexusData = parseNexusFile(filedata);
             setWorkspaceForm(window.nexusData);
         } catch (e) {
-            //dialog.showErrorBox('File opening error', 'Unable to open file.');
+            dialog.showErrorBox('File opening error', 'Unable to open file.');
         }
     }
 }
