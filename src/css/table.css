@@ -59,7 +59,8 @@
     min-width: 5rem;
     background-color: rgba(0, 0, 0, 0.2);
 }
-#_T0 td, #_S0 td {
+#_T0 td,
+#_S0 td {
     min-width: fit-content;
     width: fit-content;
     max-width: fit-content;
@@ -78,7 +79,7 @@
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
-#_T0 input[type=radio] {
+#_T0 input[type="radio"] {
     margin: 0.6rem;
     margin-right: 0.2rem;
     transform: scale(1.5);
@@ -90,13 +91,12 @@
     padding-right: 1rem;
 }
 #_T0 tr:nth-child(2n) {
-
 }
 #_T0 tr:hover td {
     background-color: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.15);
 }
-#_T0 tr:hover input[type=radio] {
+#_T0 tr:hover input[type="radio"] {
     filter: brightness(1);
 }
 .light-column {

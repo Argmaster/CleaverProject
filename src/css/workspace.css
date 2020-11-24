@@ -42,7 +42,7 @@
 .tree-prop-display-block {
     padding-left: 1rem;
 }
-.tree-prop-display-block input[type=radio] {
+.tree-prop-display-block input[type="radio"] {
     transform: scale(1.5);
     margin: 0.5rem;
 }
@@ -63,7 +63,8 @@ textarea.prop-input {
     font-size: 1rem;
     line-height: 1.5rem;
 }
-.prop-input:active, .prop-input:hover {
+.prop-input:active,
+.prop-input:hover {
     background-color: rgba(59, 59, 59, 0.4);
     border: 1px solid rgba(189, 189, 189, 0.5);
 }

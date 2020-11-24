@@ -1,100 +1,97 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Cleaver</title>
+        <link rel="stylesheet" href="../css/main.css" />
+        <link rel="stylesheet" href="../css/nav.css" />
+        <link rel="stylesheet" href="../css/workspace.css" />
+        <link rel="stylesheet" href="../css/table.css" />
+        <link rel="stylesheet" href="../css/tree.css" />
 
-<head>
-    <meta charset="UTF-8">
-    <title>Cleaver</title>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/nav.css">
-    <link rel="stylesheet" href="../css/workspace.css">
-    <link rel="stylesheet" href="../css/table.css">
-    <link rel="stylesheet" href="../css/tree.css">
-
-
-    <script>const $ = require('jquery');</script>
-    <script defer src="../js/parser.js"></script>
-    <script defer src="../js/form.js"></script>
-    <script defer src="../js/tree.js"></script>
-    <script defer src="../js/nexio.js"></script>
-    <script defer src="../js/jsonio.js"></script>
-    <script defer src="../js/index.js"></script>
-</head>
-<body>
-    <nav class="side-nav">
-        <img class="side-nav-icon" src="../../img/file.svg" alt="icon" id="openNexusFile">
-        <img class="side-nav-icon" src="../../img/save.svg" alt="icon" id="saveNexusFile">
-        <img class="side-nav-icon" src="../../img/filej.svg" alt="icon" id="openJSONFile">
-        <img class="side-nav-icon" src="../../img/savej.svg" alt="icon" id="saveJSONFile">
-    </nav>
-    <main>
-        <div class="file-path-box">
-            <img class="file-path-icon" src="../../img/file.svg" alt="icon" id="openNexusFile">
-            <div class="file-path-text" id="file-main-title">No file selected</div>
-        </div>
-        <div class="workspace-div">
-            <div class="extend-bar" onclick="$('#table-div').toggleClass('workspace-inner-hidden')">||</div>
-            <div class="workspace-inner" id="table-div">
-                <div id="table-scroller">
-                    <table id="_S0"></table>
-                    <table id="_T0" class="hoverable"></table>
-                </div>
+        <script>
+            const $ = require('jquery');
+        </script>
+        <script defer src="../js/parser.js"></script>
+        <script defer src="../js/form.js"></script>
+        <script defer src="../js/tree.js"></script>
+        <script defer src="../js/nexio.js"></script>
+        <script defer src="../js/jsonio.js"></script>
+        <script defer src="../js/index.js"></script>
+    </head>
+    <body>
+        <nav class="side-nav">
+            <img class="side-nav-icon" src="../../img/file.svg" alt="icon" id="openNexusFile" />
+            <img class="side-nav-icon" src="../../img/save.svg" alt="icon" id="saveNexusFile" />
+            <img class="side-nav-icon" src="../../img/filej.svg" alt="icon" id="openJSONFile" />
+            <img class="side-nav-icon" src="../../img/savej.svg" alt="icon" id="saveJSONFile" />
+        </nav>
+        <main>
+            <div class="file-path-box">
+                <img class="file-path-icon" src="../../img/file.svg" alt="icon" id="openNexusFile" />
+                <div class="file-path-text" id="file-main-title">No file selected</div>
             </div>
-            <div class="extend-bar" onclick="$('#prop-div').toggleClass('workspace-inner-hidden')">||</div>
-            <div class="workspace-inner workspace-inner-hidden" id="prop-div">
-                <div class="file-prop-row">
-                    <div>TAXA TITLE</div>
-                    <input type='text' class="prop-input" id="TAXA_TITLE" spellcheck="false">
-                </div>
-                <div class="file-prop-row">
-                    <div>TAXA DIMENSIONS</div>
-                    <input type='text' class="prop-input" id="TAXA_DIMENSIONS" spellcheck="false">
-                </div>
-                <div class="file-prop-row">
-                    <div>CHARACTERS TITLE</div>
-                    <input type='text' class="prop-input" id="CHARACTERS_TITLE" spellcheck="false">
-                </div>
-                <div class="file-prop-row">
-                    <div>CHARACTERS DIMENSIONS</div>
-                    <input type='text' class="prop-input" id="CHARACTERS_DIMENSIONS" spellcheck="false">
-                </div>
-                <div class="file-prop-row">
-                    <div>SYMBOLS</div>
-                    <input type='text' class="prop-input" id="SYMBOLS" spellcheck="false">
-                </div>
-                <div class="file-prop-row">
-                    <div>TREE TITLE</div>
-                    <input type='text' class="prop-input" id="TREE_TITLE" spellcheck="false">
-                </div>
-                <div class="file-prop-row">
-                    <div>LINK</div>
-                    <input type='text' class="prop-input" id="LINK_TAXA" spellcheck="false">
-                </div>
-                <div class="file-prop-row">
-                    <div>TREE NAME</div>
-                    <input type='text' class="prop-input" id="TREE_NAME" spellcheck="false">
-                </div>
-                <div class="file-prop-row">
-                    <div>TREE</div>
-                    <textarea spellcheck="false" id="TREE" class="prop-input"></textarea>
-                </div>
-                <div class="file-prop-row">
-                    <div>SPECIES IN TREE AS:</div>
-                    <div class="tree-prop-display-block">
-                        <input type="radio" name="tRep" id="tRep0" checked>
-                        <label for="tRep0">NAMES</label>
-                    </div>
-                    <div class="tree-prop-display-block">
-                        <input type="radio" name="tRep" id="tRep1">
-                        <label for="tRep1">INDEXES</label>
+            <div class="workspace-div">
+                <div class="extend-bar" onclick="$('#table-div').toggleClass('workspace-inner-hidden')">||</div>
+                <div class="workspace-inner" id="table-div">
+                    <div id="table-scroller">
+                        <table id="_S0"></table>
+                        <table id="_T0" class="hoverable"></table>
                     </div>
                 </div>
+                <div class="extend-bar" onclick="$('#prop-div').toggleClass('workspace-inner-hidden')">||</div>
+                <div class="workspace-inner workspace-inner-hidden" id="prop-div">
+                    <div class="file-prop-row">
+                        <div>TAXA TITLE</div>
+                        <input type="text" class="prop-input" id="TAXA_TITLE" spellcheck="false" />
+                    </div>
+                    <div class="file-prop-row">
+                        <div>TAXA DIMENSIONS</div>
+                        <input type="text" class="prop-input" id="TAXA_DIMENSIONS" spellcheck="false" />
+                    </div>
+                    <div class="file-prop-row">
+                        <div>CHARACTERS TITLE</div>
+                        <input type="text" class="prop-input" id="CHARACTERS_TITLE" spellcheck="false" />
+                    </div>
+                    <div class="file-prop-row">
+                        <div>CHARACTERS DIMENSIONS</div>
+                        <input type="text" class="prop-input" id="CHARACTERS_DIMENSIONS" spellcheck="false" />
+                    </div>
+                    <div class="file-prop-row">
+                        <div>SYMBOLS</div>
+                        <input type="text" class="prop-input" id="SYMBOLS" spellcheck="false" />
+                    </div>
+                    <div class="file-prop-row">
+                        <div>TREE TITLE</div>
+                        <input type="text" class="prop-input" id="TREE_TITLE" spellcheck="false" />
+                    </div>
+                    <div class="file-prop-row">
+                        <div>LINK</div>
+                        <input type="text" class="prop-input" id="LINK_TAXA" spellcheck="false" />
+                    </div>
+                    <div class="file-prop-row">
+                        <div>TREE NAME</div>
+                        <input type="text" class="prop-input" id="TREE_NAME" spellcheck="false" />
+                    </div>
+                    <div class="file-prop-row">
+                        <div>TREE</div>
+                        <textarea spellcheck="false" id="TREE" class="prop-input"></textarea>
+                    </div>
+                    <div class="file-prop-row">
+                        <div>SPECIES IN TREE AS:</div>
+                        <div class="tree-prop-display-block">
+                            <input type="radio" name="tRep" id="tRep0" checked />
+                            <label for="tRep0">NAMES</label>
+                        </div>
+                        <div class="tree-prop-display-block">
+                            <input type="radio" name="tRep" id="tRep1" />
+                            <label for="tRep1">INDEXES</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="extend-bar" onclick="$('#tree-div').toggleClass('workspace-inner-hidden')">||</div>
+                <div class="workspace-inner workspace-inner-hidden" id="tree-div"></div>
             </div>
-            <div class="extend-bar" onclick="$('#tree-div').toggleClass('workspace-inner-hidden')">||</div>
-            <div class="workspace-inner workspace-inner-hidden" id="tree-div">
-
-            </div>
-        </div>
-    </main>
-</body>
-
+        </main>
+    </body>
 </html>
