@@ -86,8 +86,8 @@ function parseDataSection(sourceString, nexusData, beginIndex) {
         .split(',');
     // spit and place features in filedata object
     for (let f of featuresBuffer) {
-        f = f.split(/\d/)[1].split('/');
-        nexusData.FEATURES_NAMES.push(f[0].trim());
+        f = f.split('/');
+        nexusData.FEATURES_NAMES.push(f[0].trim().split(/\s+/)[1].trim());
         nexusData.FEATURES_OPT.push(f[1].trim().split(/\s+/));
     }
     // truncate source to MATRIX keyword
@@ -165,6 +165,6 @@ function parseNexusFile(sourceString) {
     if (beginIndex != -1) {
         parseTreeSection(sourceString, nexusData, beginIndex);
     }
-    nexusData.TAIL = "";
+    nexusData.TAIL = '';
     return nexusData;
 }
