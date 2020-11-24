@@ -65,14 +65,14 @@ function openNexusFile() {
     });
     if (file != undefined) {
         file = file[0];
-        //try {
+        try {
             let filedata = fs.readFileSync(file, 'utf-8');
             $('#file-main-title').text(file);
             window.nexusData = parseNexusFile(filedata);
             setWorkspaceForm(window.nexusData);
-        //} catch (e) {
+        } catch (e) {
             //dialog.showErrorBox('File opening error', 'Unable to open file.');
-        //}
+        }
     }
 }
 function saveNexusFile() {
