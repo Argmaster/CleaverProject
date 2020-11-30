@@ -15,7 +15,7 @@ const createWindow = async () => {
     });
 
     window = await mainWindow.loadFile(path.join(__dirname, '../html/index.html'));
-    //mainWindow.webContents.openDevTools();
+    mainWindow.webContents.openDevTools();
 };
 app.on('ready', function () {
     createWindow();

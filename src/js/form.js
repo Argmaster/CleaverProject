@@ -117,7 +117,7 @@ function getWorkspaceFormData() {
         nexusData.CHARACTERS_DIMENSIONS = $("#CHARACTERS_DIMENSIONS")
             .val()
             .trim();
-        nexusData.SYMBOLS = $("#TREE_TITLE").val().trim();
+        nexusData.SYMBOLS = $("#SYMBOLS").val().trim();
         nexusData.TREE_TITLE = $("#TREE_TITLE").val().trim();
         nexusData.LINK_TAXA = $("#LINK_TAXA").val().trim();
         nexusData.TREE_NAME = $("#TREE_NAME").val().trim();

@@ -36,6 +36,9 @@
 .file-prop-row {
     padding: 0.4rem;
 }
+.file-prop-row div {
+    user-select: none;
+}
 .file-prop-row div:nth-child(1) {
     font-size: 1rem;
 }

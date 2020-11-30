@@ -1,13 +1,12 @@
 function createNexusStructure() {
     let nexusData = getWorkspaceFormData();
     let date = Date();
-    console.log(date);
     let TAXA_SECTION = `
 BEGIN TAXA;
     TITLE ${nexusData.TAXA_TITLE};
     DIMENSIONS ${nexusData.TAXA_DIMENSIONS};
     TAXLABELS
-        ${nexusData.TAXLABELS.join("\n       ")}
+        ${nexusData.TAXLABELS.join("\n        ")}
     ;
 END;
 `;
